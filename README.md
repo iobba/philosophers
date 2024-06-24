@@ -14,7 +14,7 @@ The dining philosophers problem is a famous problem in computer science used to 
       while thinking, they are not eating nor sleeping,
       and, of course, while sleeping, they are not eating nor thinking.
       
-  ![Image Description](URL_to_image)
+  ![Image Description](https://github.com/iobba/philosophers/blob/master/philo/zphilo_img.png)
 
 ## Overview
 
@@ -33,6 +33,15 @@ This project simulates the classic dining philosophers problem, featuring both a
 - **Processes**: Unlike threads, processes run independently and have their own memory space. The bonus part introduces processes for philosophers, enhancing scalability and isolation.
 
 - **Semaphores**: Semaphores are used to represent the availability of resources (forks) in a synchronized manner. They allow for efficient management of shared resources across multiple processes.
+
+### Data Races (Race Conditions) — What Are They?
+Data races are a common problem in multithreaded programming. Data races occur when multiple tasks or threads access a shared resource without sufficient protections, leading to undefined or unpredictable behavior.
+
+- two or more threads concurrently accessing a location of memory
+- one of them is a write
+- one of them is unsynchronized
+  
+In simpler words a race condition can happen when 2 or more threads are trying to access and modify the same variable at the same time, it can lead to an error in the final value of the variable, it doesn’t mean it will for sure happen though. For an example let’s think of a function that deposits the amount you insert to your bank account, If we use multithreading and use 2 threads and want to deposit 300 using the first thread and 200 using the second you will think our bank account will have a total of 500, but that’s not particularly the case.
 
 ## Project Structure
 
